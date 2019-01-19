@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "957321769280",
+    "firebase_url": "https://emergency-notification-system.firebaseio.com",
+    "project_id": "emergency-notification-system",
+    "storage_bucket": "emergency-notification-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957321769280:android:1da64a5660e789ca",
+        "android_client_info": {
+          "package_name": "com.nearbyincidents"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957321769280-jaia3b7ve583f6v8qkh5ll375ka8jimi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nearbyincidents",
+            "certificate_hash": "3e7ee019d1393b36d5eaea84874ba8ced3274ee1"
+          }
+        },
+        {
+          "client_id": "957321769280-p4nkc0kikf6vtvhrbrfr87jvafmo7ds5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nearbyincidents",
+            "certificate_hash": "d3fc0ae1cdc234489b135034c0e6d3c6f1eac891"
+          }
+        },
+        {
+          "client_id": "957321769280-c2deo85j6b35e45mpf3r81rj0rqmob85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWp0ItD8FmyXuvTJb7jUudfclqHvlpoOU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957321769280-c2deo85j6b35e45mpf3r81rj0rqmob85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
