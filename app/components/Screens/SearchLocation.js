@@ -1,21 +1,18 @@
+import {Maps_Key} from './../../assets/apiKey';
+import blue from './../../styles/colors';
+import SearchItem from './SearchItem';
 import React, {Component} from 'react';
 import {
-    View,
-    TextInput,
-    Text,
+    ScrollView,
     StyleSheet,
-    ScrollView
+    Text,
+    TextInput,
+    View
 } from 'react-native'
-
-import SearchItem from './SearchItem';
-
-import blue from './../../styles/colors';
-
-import {Maps_Key} from './../../assets/apiKey';
 import { GoogleAutoComplete } from 'react-native-google-autocomplete';
 
 class SearchLocation extends Component {
-    
+
     static navigationOptions = ({navigation}) => {
         return {
             headerTitle: <Text style={styles.headerTitle}>Search Location</Text>,
@@ -25,18 +22,18 @@ class SearchLocation extends Component {
     handlePress = (placeDetails) => {
         this.props.navigation.state.params.screenProps.navigate('SubscribeLocation', {screenProps: placeDetails, navigation: this.props.navigation.state.params.screenProps});
     }
-        
+
     render(){
         return (
             <View style={styles.container}>
-                <GoogleAutoComplete apiKey={Maps_Key} 
+                <GoogleAutoComplete apiKey={Maps_Key}
                     debounce={1000}
                     minLength={4}
                  >
                     {({ handleTextChange, locationResults, fetchDetails }) => (
                         <React.Fragment>
                             <View style={styles.inputWrapper}>
-                                <TextInput 
+                                <TextInput
                                     placeholder="Search Location"
                                     style={styles.textInput}
                                     onChangeText={handleTextChange}
@@ -45,7 +42,7 @@ class SearchLocation extends Component {
                             <ScrollView>
                                 {locationResults.map(e1 => (
                                     <SearchItem
-                                        key={e1.id}  
+                                        key={e1.id}
                                         {...e1}
                                         fetchDetails={fetchDetails}
                                         handlePress={this.handlePress}
@@ -75,15 +72,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     textInput: {
-        height: 40,
+        height: 50,
         width: 300,
+        fontSize: 16,
         borderWidth: 1,
-        paddingHorizontal: 16,
+
+        paddingHorizontal: 8,
         borderRadius: 15,
         borderColor: blue
     },
     inputWrapper: {
-        marginTop: 40
+        marginTop: 40,
+        tintColor: '#2E5EAA'
+
     },
     resultsContainer: {
         marginTop: 5,

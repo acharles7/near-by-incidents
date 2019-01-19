@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import {
+    Text,
     View,
-    Text
+    WebView
 } from 'react-native';
 
 class MapView extends Component {
     render(){
         return (
-            <View>
-                <Text> This is my newest Map View Component </Text>
-            </View>
+          <WebView
+              source={{uri: 'https://github.com/facebook/react-native'}}
+              />
         )
     }
 }

@@ -1,34 +1,29 @@
-import React, {Component} from 'react';
-import {
-    View,
-    Text,
-    StyleSheet,
-    TouchableOpacity,
-    Modal
-} from 'react-native'
-
-import { 
-    TabNavigator, 
-    StackNavigator
-} from 'react-navigation';
-
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-
+import firebaseConn from './../helper/FirebaseConnection';
+import blue from './../styles/colors';
+import FilterModal from './Filter/FilterModal';
 import ListView from './TabNavigator/ListView';
 import MapView from './TabNavigator/MapView';
-import FilterModal from './Filter/FilterModal';
-
-import firebaseConn from './../helper/FirebaseConnection';
-
-import blue from './../styles/colors';
+import React, {Component} from 'react';
+import {
+    Modal,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View
+} from 'react-native'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import {
+    StackNavigator,
+    TabNavigator
+} from 'react-navigation';
 
 // This Component makes the calls to Google Firebase. The incidents list is then passed to the other screens as props
 class AppTabNavigator extends Component {
-    
+
     constructor(props){
         super(props);
-        
+
         // The data for the events goes here and yet to be added
         // This state is responsible for handling the showing of the modal as the filter button is on this screen
         this.state = {
@@ -39,13 +34,13 @@ class AppTabNavigator extends Component {
     }
 
     // navigationOptions are responsible for displaying the top right corner filter icon,
-    // top left corner icon for drawer and the header text 
+    // top left corner icon for drawer and the header text
     static navigationOptions = ({navigation}) => {
         return {
             headerTitle: <Text style={styles.headerTitle}>Nearby Incidents</Text>,
             headerLeft: (
                 <View style={{padding: 20}}>
-                    <Ionicons name="md-menu" 
+                    <Ionicons name="md-menu"
                         size={24}
                         color='white'
                         onPress={() => navigation.navigate('DrawerOpen')}
@@ -53,15 +48,15 @@ class AppTabNavigator extends Component {
                 </View>
             ),
             headerRight: (
-                <View style={{flexDirection:'row', padding: 20}}> 
-                    <Ionicons 
+                <View style={{flexDirection:'row', padding: 20}}>
+                    <Ionicons
                         name="ios-search"
                         size={24}
                         color='white'
                         onPress={() => navigation.navigate('SearchLocationPage', {screenProps: navigation})}
                         style={{marginRight: 25, marginBottom: 5}}
                     />
-                    <FontAwesome5 name="filter" 
+                    <FontAwesome5 name="filter"
                         size={18}
                         onPress={() => {navigation.state.params.handleFilter()}}
                         color='white'
@@ -113,7 +108,7 @@ class AppTabNavigator extends Component {
             this.setState({ incidentItems: arrIncidents});
         });
     }
-    
+
     render(){
         return(
             <View style={styles.container}>
@@ -123,8 +118,8 @@ class AppTabNavigator extends Component {
         );
     }
 }
-// Children of HomeScreenTabNavigator will not have access to the navigation prop. 
-// So we pass a ScreenProps giving the reference to the navigation object 
+// Children of HomeScreenTabNavigator will not have access to the navigation prop.
+// So we pass a ScreenProps giving the reference to the navigation object
 // and access it using this.ScreenProps props
 
 
@@ -158,8 +153,8 @@ const HomeScreenTabNavigator = TabNavigator({
             fontWeight: 'bold'
         },
         indicatorStyle: {
-            borderBottomColor: 'white',
-            borderBottomWidth: 3
+            borderBottomColor: '#C52233',
+            borderBottomWidth: 4
         },
         style: {
             backgroundColor: blue
