@@ -60,12 +60,13 @@ const styles = StyleSheet.create({
   recView: {
       borderBottomColor: 'darkgrey',
       borderBottomWidth: 1,
-      margin: 10,
-      justifyContent: 'center'
+      //margin: 10,
+      justifyContent: 'center',
+      backgroundColor:'#C81D25'
   },
   containerScrollView: {
-      marginBottom: 5,
-      marginTop: 5
+      marginBottom: 2,
+      marginTop: 2
   },
   btnAdd: {
       position: 'absolute',
@@ -76,9 +77,11 @@ const styles = StyleSheet.create({
       backgroundColor: '#D3D3D3',
   },
   recordSeparator: {
-      borderBottomColor: 'black',
-      marginBottom: 5,
+      //borderBottomColor: '#C81D25',
+      marginBottom: 2,
       marginTop: 5,
+      //borderWidth:5,
+      //borderColor:'#C81D25'
       //backgroundColor: '#fff'
   }
 });

@@ -1,27 +1,25 @@
-import React, {Component} from 'react';
-import {Text,
-    View,
-    StyleSheet,
-    Image
-} from 'react-native';
-
-import {Card} from 'react-native-elements';
 import blue from './../../styles/colors';
-
+import React, {Component} from 'react';
+import {Image,
+    StyleSheet,
+    Text,
+    View
+} from 'react-native';
+import {Card} from 'react-native-elements';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 class SingleRecordView extends Component {
 
     render(){
         if(this.props.record.description.length > 100){
-            this.props.record.description = this.props.record.description.substring(0, 100) + "..."; 
+            this.props.record.description = this.props.record.description.substring(0, 100) + "...";
         }
 
         return (
-            <Card>
+            <Card sytyle={{backgroundColor:'#C81D25',elevation:20}}>
                 <View style={styles.mainContainer}>
                     <View style={styles.imageContainer}>
-                        <FontAwesome 
+                        <FontAwesome
                             size={48}
                             name="rss"
                             color={blue}
@@ -45,7 +43,8 @@ const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
         flexDirection: 'row',
-        margin: 10
+        margin: 5,
+
     },
     mainContentContainer: {
         flex: 5,

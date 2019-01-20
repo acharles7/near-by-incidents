@@ -49,29 +49,6 @@ class Chat extends Component {
         }
     }
 
-    // componentWillMount() {
-    //     this.setState({
-    //       messages: [
-    //         {
-    //           _id: 1,
-    //           text: 'Hello developer',
-    //           createdAt: new Date(),
-    //           user: {
-    //             _id: 2,
-    //             name: 'React Native',
-    //             avatar: 'https://placeimg.com/140/140/any',
-    //           },
-    //         },
-    //       ],
-    //     })
-    //   }
-  //
-  //     onSend(messages = []) {
-  //   this.setState(previousState => ({
-  //     messages: GiftedChat.append(previousState.messages, messages),
-  //   }))
-  // }
-
   componentWillMount() {
       this._isMounted = true;
       this.setState(() => {
@@ -161,7 +138,7 @@ class Chat extends Component {
           user: {
             _id: 2,
             name: 'React Native',
-            // avatar: 'https://facebook.github.io/react/img/logo_og.png',
+            avatar: 'https://facebook.github.io/react/img/logo_og.png',
           },
         }),
       };
