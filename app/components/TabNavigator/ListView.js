@@ -1,4 +1,3 @@
-import blue from './../../styles/colors';
 import SingleRecord from './SingleRecordView';
 import React, {Component} from 'react';
 import {
@@ -38,7 +37,8 @@ class ListView extends Component {
                     <MaterialIcons
                         name="add-circle"
                         size={60}
-                        color={blue}
+                        raised
+                        color={'#FE5F55'}
                     />
                 </TouchableOpacity>
             </View>
@@ -71,10 +71,11 @@ const styles = StyleSheet.create({
   btnAdd: {
       position: 'absolute',
       bottom: 10,
+      color:'#D3D3D3',
       right: 20,
       opacity: 1,
       borderRadius: 15,
-      backgroundColor: '#D3D3D3',
+      //backgroundColor: '#D3D3D3',
   },
   recordSeparator: {
       //borderBottomColor: '#C81D25',

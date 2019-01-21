@@ -9,7 +9,7 @@ class MapView extends Component {
     render(){
         return (
           <WebView
-              source={{uri: 'https://github.com/facebook/react-native'}}
+              source={{uri: 'https://www.foxnews.com/us'}}
               />
         )
     }

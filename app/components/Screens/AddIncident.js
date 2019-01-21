@@ -18,6 +18,7 @@ import {
 } from 'react-native-elements';
 import { GoogleAutoComplete } from 'react-native-google-autocomplete';
 import RadioButton from 'react-native-radio-button'
+import AwesomeButton from 'react-native-really-awesome-button';
 
 class AddIncident extends Component {
 
@@ -193,23 +194,14 @@ class AddIncident extends Component {
                 </View>
                 <View style={styles.viewSeparator} />
 
+                  <AwesomeButton
+                        progress
+                        onPress={this.handleSubmit}
+                        style={styles.btnSubmit}>
+                         <Text style={{fontSize:20, backgroundPlaceholder: '#2E5EAA'}}>Submit</Text>
 
-                  <Button
-                    title="LOADING BUTTON"
-                    onPress={this.handleSubmit}
-
-                    titleStyle={{ fontWeight: "700" }}
-                    buttonStyle={{
-                      backgroundColor: "rgba(92, 99,216, 1)",
-                      width: 300,
-                      height: 45,
-                      alignSelf:'center',
-                      borderColor: "transparent",
-                      borderWidth: 0,
-                      borderRadius: 5
-                    }}
-                    containerStyle={{ marginTop: 20 }}
-                    />
+                  </AwesomeButton>
+                  
 
             </ScrollView>
         )

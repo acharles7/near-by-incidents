@@ -8,7 +8,7 @@ import {
     TouchableOpacity,
     View
 } from 'react-native';
-import { Actions, Bubble, GiftedChat, SystemMessage } from 'react-native-gifted-chat'
+import { Actions, Bubble, GiftedChat, InputToolbar, SystemMessage } from 'react-native-gifted-chat'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 class Chat extends Component {
@@ -90,7 +90,7 @@ class Chat extends Component {
     });
 
     // for demo purpose
-    this.answerDemo(messages);
+    //this.answerDemo(messages);
   }
 
   answerDemo(messages) {
@@ -145,6 +145,17 @@ class Chat extends Component {
     });
   }
 
+  renderInputToolbar (props) {
+     //Add the extra styles via containerStyle
+    return <InputToolbar {...props}
+      containerStyle={{
+        border: '#333',
+        borderRadius:10,
+        shadowRadius:10
+
+      }} />
+  }
+
   renderCustomActions(props) {
     if (Platform.OS === 'ios') {
       return (
@@ -154,10 +165,10 @@ class Chat extends Component {
       );
     }
     const options = {
-      'Action 1': (props) => {
+      'Photos': (props) => {
         alert('option 1');
       },
-      'Action 2': (props) => {
+      'Videos': (props) => {
         alert('option 2');
       },
       'Cancel': () => {},
@@ -233,7 +244,7 @@ class Chat extends Component {
                user={{
                  _id: 1, // sent messages should have same user._id
                }}
-
+              renderInputToolbar={this.renderInputToolbar}
               renderActions={this.renderCustomActions}
               renderBubble={this.renderBubble}
               renderSystemMessage={this.renderSystemMessage}

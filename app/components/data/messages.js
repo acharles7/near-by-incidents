@@ -1,7 +1,7 @@
 module.exports = [
   {
     _id: Math.round(Math.random() * 1000000),
-    text: 'Yes, and I use Gifted Chat!',
+    text: 'I am from San Jose!',
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -16,7 +16,7 @@ module.exports = [
   },
   {
     _id: Math.round(Math.random() * 1000000),
-    text: 'Are you building a chat app?',
+    text: 'You are from..?',
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
